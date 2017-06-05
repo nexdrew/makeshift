@@ -1,5 +1,7 @@
 # makeshift
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nexdrew/makeshift.svg)](https://greenkeeper.io/)
+
 > Shove scopes and tokens into .npmrc
 
 [![Build Status](https://travis-ci.org/nexdrew/makeshift.svg?branch=master)](https://travis-ci.org/nexdrew/makeshift)
