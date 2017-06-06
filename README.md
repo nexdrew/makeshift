@@ -1,12 +1,11 @@
 # makeshift
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/nexdrew/makeshift.svg)](https://greenkeeper.io/)
-
 > Shove scopes and tokens into .npmrc
 
 [![Build Status](https://travis-ci.org/nexdrew/makeshift.svg?branch=master)](https://travis-ci.org/nexdrew/makeshift)
 [![Coverage Status](https://coveralls.io/repos/github/nexdrew/makeshift/badge.svg?branch=master)](https://coveralls.io/github/nexdrew/makeshift?branch=master)
 [![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg)](https://github.com/conventional-changelog/standard-version)
+[![Greenkeeper badge](https://badges.greenkeeper.io/nexdrew/makeshift.svg)](https://greenkeeper.io/)
 
 Simple CLI and module to add scopes and auth tokens to npm userconfig. `makeshift` remembers the odd key-value syntax in `.npmrc` so you don't have to.
 
