@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/nexdrew/makeshift/compare/v1.0.0...v1.0.1) (2017-06-30)
+
+
+### Bug Fixes
+
+* **package:** update chalk to version 2.0.1 ([#5](https://github.com/nexdrew/makeshift/issues/5)) ([cceab5c](https://github.com/nexdrew/makeshift/commit/cceab5c)), closes [#4](https://github.com/nexdrew/makeshift/issues/4)
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2016-07-08)
 
