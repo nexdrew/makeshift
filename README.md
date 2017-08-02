@@ -63,11 +63,11 @@ Usage: makeshift [-s scope] [-r registry] [-t token]
 Associate scopes and/or auth token to a registry in .npmrc
 
 Options:
-  -s, --scope     One or more scopes to associate                        [array]
+  -s, --scope     One or more scopes to associate                 [array:string]
   -r, --registry  The registry to apply scopes/token to                 [string]
   -t, --token     The token value to set for the registry               [string]
-  -h, --help      Show help                                            [boolean]
-  -v, --version   Show version number                                  [boolean]
+  -h, --help      Show help                           [commands: help] [boolean]
+  -v, --version   Show version number              [commands: version] [boolean]
 ```
 
 Note that the CLI will look for env vars prefixed with `NPM_` for any options not given on the command line, e.g. `NPM_TOKEN` (useful in CI environment).
