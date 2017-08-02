@@ -6,6 +6,8 @@ var readFile = Promise.promisify(require('fs').readFile)
 var rimraf = Promise.promisify(require('rimraf'))
 var userconfig = require('./utils').userconfig
 var token = require('./utils').token
+var registry = require('./utils').registry
+var scope = require('./utils').scope
 var figures = require('figures')
 var parse = require('url-parse-as-address')
 
@@ -63,6 +65,21 @@ tap.test('cli > displays help with no args and no env vars', function (assert) {
     return execBin().then(function (result) {
       assert.notOk(result.err)
       assert.ok(result.stdout.match(/Usage: makeshift \[-s scope\] \[-r registry\] \[-t token\]/))
+    })
+  })
+})
+
+tap.test('cli > looks for NPM_REGISTRY and NPM_SCOPE env vars', assert => {
+  return Promise.using(userconfig(TEST_USERCONFIG), registry('127.0.0.1:4000'), scope('one,two'), () => {
+    return execBin().then(result => {
+      assert.notOk(result.err)
+      assert.ok(result.stdout.match(new RegExp(figures.tick + ' Associate scope @one to registry http://127.0.0.1:4000')))
+      assert.ok(result.stdout.match(new RegExp(figures.tick + ' Associate scope @two to registry http://127.0.0.1:4000')))
+      return readFile(TEST_USERCONFIG, 'utf8')
+    }).then(function (npmrc) {
+      npmrc = npmrc && npmrc.toString().trim()
+      assert.ok(npmrc.match(/@one:registry=http:\/\/127.0.0.1:4000/))
+      assert.ok(npmrc.match(/@two:registry=http:\/\/127.0.0.1:4000/))
     })
   })
 })
