@@ -8,6 +8,14 @@ exports.token = function token (newValue) {
   return env('NPM_TOKEN', newValue)
 }
 
+exports.registry = function registry (newValue) {
+  return env('NPM_REGISTRY', newValue)
+}
+
+exports.scope = function scope (newValue) {
+  return env('NPM_SCOPE', newValue)
+}
+
 function env (varName, newValue) {
   return Promise.method(envSet)(varName, newValue).disposer(envRestore)
 }

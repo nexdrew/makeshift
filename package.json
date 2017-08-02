@@ -32,8 +32,8 @@
     "bluebird": "^3.4.1",
     "chalk": "^2.0.1",
     "figures": "^2.0.0",
-    "url-parse-as-address": "^1.0.0",
-    "yargs": "^8.0.1"
+    "sywac": "^1.0.0",
+    "url-parse-as-address": "^1.0.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.11",
